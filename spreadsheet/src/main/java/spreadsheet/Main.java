@@ -1,4 +1,4 @@
-package spreadheet;
+package spreadsheet;
 
 public class Main {
     public static void main(String[] args) {
