@@ -1,6 +1,6 @@
 package spreadsheet;
 
-public class Number implements Content, Argument, Operand {
+public class Number implements Argument, Content, Operand {
     private float value;
 
     public Number(float v){
@@ -9,5 +9,9 @@ public class Number implements Content, Argument, Operand {
 
     public float getValue(){
         return this.value;
+    }
+
+    public void setValue(float v){
+        this.value=v;
     }
 }
