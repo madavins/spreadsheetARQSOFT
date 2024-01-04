@@ -2,7 +2,7 @@ package spreadsheet;
 
 import java.util.List;
 
-public class Average implements Function{ 
+public class Average extends Function{ 
       
     private List<Argument> args;
     
@@ -14,7 +14,7 @@ public class Average implements Function{
         return args;
     }
     
-    public float calculate(){
+    public float calculateFunction(){
         float sum = 0;
         int count = 0;
         for(Argument arg : this.args){

@@ -3,7 +3,7 @@ package spreadsheet;
 import java.util.List;
 import java.util.Iterator;
 
-public class Sum implements Function{
+public class Sum extends Function{
     
     private List<Argument> args;
 
@@ -15,7 +15,7 @@ public class Sum implements Function{
         return args;
     }
 
-    public float calculate(){
+    public float calculateFunction(){
         float sum = 0;
         for(Argument arg : this.args){
             if(arg instanceof Function){

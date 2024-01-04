@@ -2,7 +2,7 @@ package spreadsheet;
 
 import java.util.List;
 
-public class Min implements Function{
+public class Min extends Function{
     
     private List<Argument> args;
     
@@ -14,7 +14,7 @@ public class Min implements Function{
         return args;
     }
     
-    public float calculate(){
+    public float calculateFunction(){
         float min = Float.MAX_VALUE;
         for(Argument arg : this.args){
             if(arg instanceof Function){
