@@ -1,6 +1,6 @@
 package spreadsheet;
 
-public class Number extends Operand implements Content, Argument {
+public class Number implements Content, Argument, Operand {
     private float value;
 
     public Number(float v){

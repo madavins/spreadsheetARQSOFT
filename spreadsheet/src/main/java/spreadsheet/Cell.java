@@ -1,5 +1,6 @@
 package spreadsheet;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Cell {
@@ -10,6 +11,8 @@ public class Cell {
 
     public Cell(int rowNum, int colNum){
         this.coordinate = new Coordinate(rowNum, colNum);
+        this.content = null;
+        this.refCells = new ArrayList<Cell>();
     }
 
     public Coordinate getCoordinate(){

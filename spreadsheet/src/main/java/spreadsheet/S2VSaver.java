@@ -12,7 +12,7 @@ public class S2VSaver {
 
     }
 
-    public void saveSpreadsheet(Spreadsheet spreadsheet) {
+    public void saveSpreadsheet(Spreadsheet spreadsheet, String path) {
 
     }
     

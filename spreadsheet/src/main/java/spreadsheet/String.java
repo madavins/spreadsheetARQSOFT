@@ -10,5 +10,13 @@ public class String implements Content{
     public String getValue(){
         return this.value;
     }
-    
+
+    public static Object valueOf(String value2) {
+        return null;
+    }
+
+    public void setValue(String value) {
+        this.value = value;
+    }
+
 }

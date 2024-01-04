@@ -7,24 +7,29 @@ public class Spreadsheet {
     int rowNum;
     int colNum;
     int id;
-    List<Cell> cells;
+    Cell[][] cells;
 
     public Spreadsheet(int rowNum, int colNum, int id){
         this.rowNum = rowNum;
         this.colNum = colNum;
         this.id = id;
+        this.cells = new Cell[rowNum][colNum];
 
         for(int i = 0; i < rowNum; i++){
             for(int j = 0; j < colNum; j++){
                 Cell cell = new Cell(i, j);
-                cells.add(cell);
+                cells[i][j] = cell;
             }
         }
 
     }
 
-    public List<Cell> getCells() {
+    public Cell[][] getCells() {
         return cells;
+    }
+
+    public Cell getCell(int row, int col) {
+        return cells[row][col];
     }
 
     public int getId() {
