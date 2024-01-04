@@ -1,9 +1,9 @@
 package spreadsheet;
 
-public class String implements Content{
+public class Text implements Content{
     private String value;
 
-    public String(String v){
+    public Text(String v){
         this.value=v;
     }
 

@@ -9,8 +9,6 @@ public class SpreadsheetController {
 
     public SpreadsheetController(Spreadsheet spreadsheet) {
         this.spreadsheet = spreadsheet;
-        
-
     }
 
     public void editCell(Coordinate coordinate, String content) {
@@ -26,15 +24,12 @@ public class SpreadsheetController {
         //Falta excepció content de content
         if(content.contains("=")){  //Detectar si es formula
             
-        }else if (...){  //Detectar si es numeric
-            
         }else{ //Es text
 
         }
 
         //referencia a la cela
-        this.spreadsheet.getCells()[coordinate.row][coordinate.col].setContent(content);
-
+        //this.spreadsheet.getCells()[coordinate.row][coordinate.col].setContent(content);
     }
 
     public void recalculateReferences(Cell cell) {
@@ -55,6 +50,10 @@ public class SpreadsheetController {
 
     public void loadSpreadsheet(String path) {
         this.loader.loadSpreadsheet(path);
+    }
+
+    public Spreadsheet getSpreadsheet() {
+        return this.spreadsheet;
     }
     
 }

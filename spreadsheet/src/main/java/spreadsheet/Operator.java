@@ -11,5 +11,9 @@ public abstract class Operator implements FormulaComponent {
     public Operator getOperator() {
         return this;
     }
+
+    public String getType() {
+        return this.type;
+    }
     
 }

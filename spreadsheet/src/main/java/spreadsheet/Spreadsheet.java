@@ -21,7 +21,6 @@ public class Spreadsheet {
                 cells[i][j] = cell;
             }
         }
-
     }
 
     public Cell[][] getCells() {
@@ -43,4 +42,5 @@ public class Spreadsheet {
     public int getRowNum() {
         return rowNum;
     }
+    
 }
