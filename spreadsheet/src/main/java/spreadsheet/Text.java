@@ -1,14 +1,13 @@
 package spreadsheet;
 
-public class Text implements Content{
-    private String value;
+public class Text extends Content{
 
     public Text(String v){
-        this.value=v;
+        super(v);
     }
 
     public String getValue(){
-        return this.value;
+        return super.getValue().toString();
     }
 
     public static Object valueOf(String value2) {
@@ -16,7 +15,7 @@ public class Text implements Content{
     }
 
     public void setValue(String value) {
-        this.value = value;
+        super.setValue(value);
     }
 
 }

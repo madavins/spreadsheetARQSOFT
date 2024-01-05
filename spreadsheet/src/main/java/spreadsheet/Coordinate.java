@@ -2,19 +2,19 @@ package spreadsheet;
 
 public class Coordinate {
 
+    String col;
     int row;
-    int col;
-
-    public Coordinate(int row, int col){
-        this.row = row;
+    
+    public Coordinate(String col, int row){
         this.col = col;
+        this.row = row;
     }
 
     public int getRowNum(){
         return row;
     }
 
-    public int getColNum(){
+    public String getColNum(){
         return col;
     }
 
@@ -22,7 +22,7 @@ public class Coordinate {
         this.row = row;
     }
 
-    public void setCol(int col){
+    public void setCol(String col){
         this.col = col;
     }
     

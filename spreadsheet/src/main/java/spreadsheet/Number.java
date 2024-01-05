@@ -1,17 +1,17 @@
 package spreadsheet;
 
-public class Number implements Argument, Content, Operand {
-    private float value;
+public class Number extends Content implements Argument, Operand {
 
     public Number(float v){
-        this.value=v;
+        super(v);
     }
 
-    public float getValue(){
-        return this.value;
+    public Float getValue(){
+        String s = super.getValue().toString();
+        return Float.valueOf(s);
     }
 
-    public void setValue(float v){
-        this.value=v;
+    public void setValue(Float v){
+        super.setValue(v);
     }
 }
