@@ -1,5 +1,7 @@
 package spreadsheet;
 
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.util.Scanner;
 
 public class UserInterface {
@@ -63,6 +65,44 @@ public class UserInterface {
     }
 
     public void readCommandsFromFile(String path) {
-        // TODO
+    try {
+        Scanner fileScanner = new Scanner(new FileInputStream(path));
+
+        while (fileScanner.hasNextLine()) {
+            String input = fileScanner.nextLine();
+            String[] parts = input.split(" ", 2);
+            String command = parts[0];
+            String argument = parts.length > 1 ? parts[1] : null;
+
+            switch (command) {
+                case "RF":
+                    readCommandsFromFile(argument);
+                    break;
+                case "C":
+                    controller.createSpreadsheet(20, 20, 1);
+                    break;
+                case "E":
+                    String[] cellParts = argument.split(" ", 2);
+                    String cellCoordinate = cellParts[0];
+                    String newContent = cellParts.length > 1 ? cellParts[1] : null;
+                    controller.editCell(cellCoordinate, newContent);
+                    break;
+                case "L":
+                    controller.loadSpreadsheet(argument);
+                    break;
+                case "S":
+                    controller.saveSpreadsheet(argument);
+                    break;
+                default:
+                    System.out.println("Invalid command in file. Please check the file.");
+                    break;
+            }
+            displaySpreadsheet();
+        }
+
+        fileScanner.close();
+    } catch (FileNotFoundException e) {
+        System.out.println("File not found. Please check the file path.");
     }
+}
 }
