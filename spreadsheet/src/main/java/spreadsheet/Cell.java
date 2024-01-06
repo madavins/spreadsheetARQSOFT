@@ -9,8 +9,8 @@ public class Cell {
     private List<Cell> refCells;
     private Content content;
 
-    public Cell(int rowNum, int colNum){
-        this.coordinate = new Coordinate(rowNum, colNum);
+    public Cell(String colNum,int rowNum){
+        this.coordinate = new Coordinate(colNum,rowNum);
         this.content = null;
         this.refCells = new ArrayList<Cell>();
     }

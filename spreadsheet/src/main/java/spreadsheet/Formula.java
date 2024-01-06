@@ -2,14 +2,13 @@ package spreadsheet;
 
 import java.util.List;
 
-public class Formula implements Content{
+public class Formula extends Content{
     private String expression;
-    private float value;
     private List<FormulaComponent> components;  
 
     public Formula(String s, float v){
+        super(v);
         this.expression=s;
-        this.value=v;
     }
 
     public String getValue(){
@@ -17,6 +16,6 @@ public class Formula implements Content{
     }
 
     public void setValue(float v){
-        this.value=v;
+        super.setValue(v);
     }
 }
